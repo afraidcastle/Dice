@@ -3,9 +3,11 @@
 <head><title>Dice</title></head>
 <script>
   function doFunction(){
-    //for (let i = 0; i < 6; i++){
-    var num = Math.floor(Math.random() * 6) + 1
-    document.getElementById("myText").innerHTML = num;
+    for (let i = 0; i < 3; i++){
+      var num = Math.floor(Math.random() * 6) + 1
+      var rolls = []
+      rolls.unshift(num)
+    document.getElementById("myText").innerHTML = rolls;
     //}
   }
 </script>
