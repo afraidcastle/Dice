@@ -3,14 +3,15 @@
 <head><title>Dice</title></head>
 <script>
   function doFunction(){
-    var num = 0
+    var num
     var rolls = []
+    num = Math.floor(Math.random() * 6) + 1
     for (let i = 0; i < 3; i++){
       num = Math.floor(Math.random() * 6) + 1
       rolls.unshift(num)
     }
-    document.getElementById("roll3").innerHTML = rolls[0];
-    document.getElementById("roll3").innerHTML = rolls[1];
+    document.getElementById("roll1").innerHTML = rolls[0];
+    document.getElementById("roll2").innerHTML = rolls[1];
     document.getElementById("roll3").innerHTML = rolls[2];
   }
 </script>
