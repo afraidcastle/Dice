@@ -3,18 +3,21 @@
 <head><title>Dice</title></head>
 <script>
   function doFunction(){
+    var num = 0
+    var rolls = []
     for (let i = 0; i < 3; i++){
-      var num = Math.floor(Math.random() * 6) + 1
-      var rolls = []
+      num = Math.floor(Math.random() * 6) + 1
       rolls.unshift(num)
-    document.getElementById("myText").innerHTML = rolls;
-    //}
+    }
+    document.getElementById("roll3").innerHTML = rolls[0];
+    document.getElementById("roll3").innerHTML = rolls[1];
+    document.getElementById("roll3").innerHTML = rolls[2];
   }
 </script>
 <body>
   <h1>So Basically I did this</h1>
   <input id="clickMe" type="button" value="clickme" onclick="doFunction();" />
-  <p>Number: <span id="myText"></span></p>
+  <p>Number: <span id="roll1"> </span><span id="roll2"> </span><span id="roll3"></span></p>
   <a href="troll.html">Click here while you wait.</a>
 </body>
 </html>
