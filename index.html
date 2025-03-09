@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
-<head><title>Dice</title></head>
+<head>
+  <title>Dice</title>
+</head>
 <script>
   function doFunction(){
+    const audio = document.getElementById("myAudio");
     var num
     var rolls = []
     num = Math.floor(Math.random() * 6) + 1
@@ -10,15 +13,17 @@
       num = Math.floor(Math.random() * 6) + 1
       rolls.unshift(num)
     }
+    audio.play();
     document.getElementById("roll1").innerHTML = rolls[0];
     document.getElementById("roll2").innerHTML = rolls[1];
     document.getElementById("roll3").innerHTML = rolls[2];
   }
 </script>
 <body>
+  <audio id="myAudio" src="horn.mp3"></audio>
   <h1>So Basically I did this</h1>
-  <input id="clickMe" type="button" value="clickme" onclick="doFunction();" />
-  <p>Number: <span id="roll1"> </span><span id="roll2"> </span><span id="roll3"></span></p>
+  <div style="margin: auto; width: 50%; height: 50px;"><input id="clickMe" type="button" value="Click Me" onclick="doFunction();" style="width: 250px; height: 100px; font-size: 200%;" /></div>
+  <p style="font-size: 350%;">Number: <span id="roll1" style="border: 2px solid black; margin-right: 3px;"></span><span id="roll2" style="border: 2px solid black; margin-right: 3px;"></span><span id="roll3" style="border: 2px solid black"></span></p>
   <a href="troll.html">Click here while you wait.</a>
 </body>
 </html>
